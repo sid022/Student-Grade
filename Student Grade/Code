@@ -1,0 +1,49 @@
+public class UnitConverter 
+{
+ static double INCHES = 0.0254001;
+ static double FEET = 0.3048;
+ static double MILES = 1609.35;
+ static double MILLIMETERS = 0.001;
+ static double CENTIMETERS = 0.01;
+ static double METERS = 1;
+ static double KILOMETERS = 1000;
+ private double val ,meters ,converted;
+ String afromUnit;
+ 
+ public UnitConverter(String fromUnit)
+ {
+  afromUnit = fromUnit;
+ }
+	
+ public double toMeters(double val) 
+ {
+  if(afromUnit.equals("in"))
+  {
+   meters = (val*INCHES);
+  }
+  else if(afromUnit.equals("ft"))
+  {
+   meters = (val*FEET);
+  }
+  else if(afromUnit.equals("mi"))
+  {
+   meters = (val*MILES);
+  }
+  else if(afromUnit.equals("mm"))
+  {
+   meters = (val*MILLIMETERS);
+  }
+  else if(afromUnit.equals("cm"))
+  {
+   meters = (val*CENTIMETERS);
+  }
+  else if(afromUnit.equals("m"))
+  {
+   meters = (val*METERS);
+  }
+  else
+  {
+   meters = (val*KILOMETERS);
+  }
+  return meters;
+ }
